@@ -53,6 +53,7 @@ const RegisterView = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        width: '100%',
       }}
     >
       {/* refactor glass card */}

@@ -47,6 +47,7 @@ const LoginView = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        width: '100%',
       }}
     >
       <GlassCard>
