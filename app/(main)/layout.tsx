@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
 import Navbar from '@/components/Navbar'
 import { Box } from '@mui/material'
+import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'Datacakra App',
@@ -21,11 +21,12 @@ export default function ProtectedLayout({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#ffffff',
       }}
       id="protected-layout"
     >
       <Navbar />
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
     </Box>
   )
 }

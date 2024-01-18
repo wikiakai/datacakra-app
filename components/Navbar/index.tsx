@@ -19,7 +19,7 @@ import AdbIcon from '@mui/icons-material/Adb'
 import { useRouter } from 'next/navigation'
 
 const pages = ['touriest']
-const settings = ['Profile', 'Logout']
+const settings = ['profile', 'Logout']
 
 const Navbar = () => {
   const router = useRouter()
@@ -40,7 +40,9 @@ const Navbar = () => {
   }
   const handleMovePage = (page: string) => {
     setAnchorElNav(null)
-    router.push(`/${page}`)
+    if (page === '') {
+      router.push('/')
+    } else router.push(`/${page}`)
   }
 
   const handleCloseUserMenu = () => {
@@ -60,6 +62,7 @@ const Navbar = () => {
               color: 'inherit',
               textDecoration: 'none',
             }}
+            onClick={() => handleMovePage('')}
           >
             <FmdGoodIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             <Typography
@@ -169,7 +172,7 @@ const Navbar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem key={setting} onClick={() => handleMovePage(setting)}>
                   <Typography textAlign="center">{setting}</Typography>
                 </MenuItem>
               ))}
