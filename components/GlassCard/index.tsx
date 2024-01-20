@@ -10,7 +10,7 @@ const GlassCard = ({ children }: { children: React.ReactNode }) => {
         alignItems: 'center',
         justifyContent: 'center',
         width: '500px',
-        minHeight: '300px',
+        minHeight: '310px',
         background: 'rgba(236, 236, 236, 0.18)',
         borderRadius: '16px',
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
