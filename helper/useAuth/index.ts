@@ -6,6 +6,8 @@ const checkAuth = () => {
     accessToken = localStorage.getItem('accessToken') ?? ''
     userId = localStorage.getItem('id') ?? ''
   }
+
+  console.log(accessToken, userId)
   return {
     accessToken,
     userId,

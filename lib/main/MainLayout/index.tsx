@@ -24,6 +24,7 @@ const MainLayout = () => {
           alignItems: 'center',
           flexDirection: 'column',
           textAlign: 'center',
+          gap: '20px',
         }}
       >
         <HeadText>Welcome</HeadText>
@@ -31,6 +32,18 @@ const MainLayout = () => {
           This project was made for recruitment test in DataCakra, <br /> Please
           select the menu
         </SubHeadText>
+        <Typography>
+          Live demo{' '}
+          <a href="https://datacakra-app-wikiakai.vercel.app/" target="_blank">
+            here
+          </a>
+        </Typography>
+        <Typography>
+          Source code{' '}
+          <a href="https://github.com/wikiakai/datacakra-app" target="_blank">
+            here
+          </a>
+        </Typography>
       </Container>
     )
   }

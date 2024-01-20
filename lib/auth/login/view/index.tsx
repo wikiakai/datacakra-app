@@ -42,7 +42,7 @@ const LoginView = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'red',
+
         backgroundImage: 'url(bg.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -51,7 +51,7 @@ const LoginView = () => {
       }}
     >
       <GlassCard>
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+        <Avatar sx={{ m: 1, backgroundColor: '#00838f' }}>
           <LoginIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
@@ -94,7 +94,17 @@ const LoginView = () => {
           </Button>
           <Grid container>
             <Grid item>
-              <Link href="/register">{"Don't have an account? Sign Up"}</Link>
+              <Button
+                variant="text"
+                sx={{
+                  color: 'white',
+                  textTransform: 'capitalize',
+                  fontSize: 18,
+                }}
+                onClick={() => router.push('/register')}
+              >
+                {'Register'}
+              </Button>
             </Grid>
           </Grid>
         </Box>

@@ -17,6 +17,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import { useRouter } from 'next/navigation'
+import checkAuth from '@/helper/useAuth'
 
 const pages = ['touriest']
 const settings = ['profile', 'logout']
@@ -51,8 +52,9 @@ const Navbar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null)
   }
+
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#01579b' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#00838f' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Button
