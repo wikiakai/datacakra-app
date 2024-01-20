@@ -63,7 +63,7 @@ const RegisterView = () => {
     >
       {/* refactor glass card */}
       <GlassCard>
-        <Avatar sx={{ m: 9, backgroundColor: '#00838f' }}>
+        <Avatar sx={{ m: 1, backgroundColor: '#00838f' }}>
           <AppRegistrationIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
