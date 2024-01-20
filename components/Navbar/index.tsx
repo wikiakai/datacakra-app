@@ -48,6 +48,7 @@ const Navbar = () => {
   }
   const handleLogout = () => {
     localStorage.clear()
+    router.push('/login')
   }
   const handleCloseUserMenu = () => {
     setAnchorElUser(null)

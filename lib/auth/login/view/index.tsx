@@ -5,7 +5,6 @@ import LoginIcon from '@mui/icons-material/Login'
 import { formValueTypes } from '../../register/types'
 import { loginUser } from '../services'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 import GlassCard from '@/components/GlassCard'
 
 const LoginView = () => {
