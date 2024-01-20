@@ -17,8 +17,9 @@ const RedirectPage = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '100%',
-        height: '100vh',
+        width: '100vw',
+        height: '95vh',
+
         background: 'linear-gradient(to right, #ffd194, #70e1f5)',
       }}
     >

@@ -13,13 +13,13 @@ import MenuIcon from '@mui/icons-material/Menu'
 
 import Avatar from '@mui/material/Avatar'
 
-import Tooltip from '@mui/material/Tooltip'
+import PersonIcon from '@mui/icons-material/Person'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import { useRouter } from 'next/navigation'
 
 const pages = ['touriest']
-const settings = ['profile', 'Logout']
+const settings = ['profile', 'logout']
 
 const Navbar = () => {
   const router = useRouter()
@@ -39,12 +39,15 @@ const Navbar = () => {
     setAnchorElNav(null)
   }
   const handleMovePage = (page: string) => {
+    console.log(page)
     setAnchorElNav(null)
     if (page === '') {
       router.push('/')
     } else router.push(`/${page}`)
   }
-
+  const handleLogout = () => {
+    localStorage.clear()
+  }
   const handleCloseUserMenu = () => {
     setAnchorElUser(null)
   }
@@ -150,11 +153,12 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
+            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <Avatar alt="profileImg">
+                <PersonIcon />
+              </Avatar>
+            </IconButton>
+
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
@@ -171,59 +175,17 @@ const Navbar = () => {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={() => handleMovePage(setting)}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={() => handleMovePage('profile')}>
+                <Typography textAlign="center">Profile</Typography>
+              </MenuItem>
+              <MenuItem onClick={() => handleLogout()}>
+                <Typography textAlign="center">Logout</Typography>
+              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
       </Container>
     </AppBar>
-    // <Box
-    //   sx={{
-    //     display: 'flex',
-    //     flexDirection: 'row',
-    //     justifyContent: 'space-between',
-    //     alignItems: 'center',
-    //     width: '100%',
-    //     height: '60px',
-    //     backgroundColor: '#0097a7',
-    //   }}
-    // >
-    //   <Container
-    //     sx={{
-    //       display: 'flex',
-    //       flexDirection: 'row',
-    //       justifyContent: 'space-between',
-    //       alignItems: 'center',
-    //     }}
-    //   >
-    //     <Box>
-    //       <Button
-    //         sx={{
-    //           color: '#fafafa',
-    //         }}
-    //       >
-    //         <FmdGoodIcon /> Touriest
-    //       </Button>
-    //     </Box>
-
-    //     <Box
-    //       sx={{
-    //         display: 'flex',
-    //         flexDirection: 'row',
-    //         justifyContent: 'space-between',
-    //         alignItems: 'center',
-    //         gap: '20px',
-    //       }}
-    //     >
-    //       <Button variant="text">List</Button>
-    //       <Link>Profile</Link>
-    //     </Box>
-    //   </Container>
-    // </Box>
   )
 }
 

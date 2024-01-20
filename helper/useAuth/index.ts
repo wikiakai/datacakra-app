@@ -1,8 +1,12 @@
 'use client'
 const checkAuth = () => {
-  const accessToken: string = localStorage.getItem('accessToken') ?? ''
-  const userId: string = localStorage.getItem('id') ?? ''
+  let accessToken = ''
+  let userId = ''
 
+  // if (typeof window !== undefined) {
+  accessToken = localStorage.getItem('accessToken') ?? ''
+  userId = localStorage.getItem('id') ?? ''
+  // }
   return {
     accessToken,
     userId,

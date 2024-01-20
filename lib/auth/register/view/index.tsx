@@ -34,6 +34,11 @@ const RegisterView = () => {
     if (res.status === 201) {
       const resLogin: any = await loginUser(formValue)
       if (resLogin.status === 201) {
+        localStorage.setItem('accessToken', resLogin.data.data.Token)
+        localStorage.setItem('name', resLogin.data.data.Name)
+        localStorage.setItem('email', resLogin.data.data.Email)
+        localStorage.setItem('id', resLogin.data.data.Id)
+
         router.push('/')
       }
     } else {

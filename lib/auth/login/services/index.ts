@@ -1,3 +1,4 @@
+'use client'
 import { BASE_URL } from '@/constant'
 import Axios from 'axios'
 import { formValueTypes } from '../../register/types'
@@ -8,6 +9,7 @@ export const loginUser = async (value: formValueTypes) => {
       email: value.email,
       password: value.password,
     })
+
     if (response.status === 201) {
       localStorage.setItem('accessToken', response.data.data.Token)
       localStorage.setItem('name', response.data.data.Name)

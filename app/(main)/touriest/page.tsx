@@ -1,14 +1,8 @@
-import TouriestList from '@/lib/main/view/TouriestList'
+import TouriestList from '@/lib/main/TouriestList/view'
 import { Container } from '@mui/material'
 
 const page = () => {
-  return (
-    <main>
-      <Container>
-        <TouriestList />
-      </Container>
-    </main>
-  )
+  return <TouriestList />
 }
 
 export default page
