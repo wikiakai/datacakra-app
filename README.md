@@ -1,6 +1,6 @@
 # Front End Test - Malakhi Dwiki
 
-> This project was made for recruitment test in Synapsis.id
+> This project was made for recruitment test in Datacakra
 
 > Live Demo https://datacakra-app-wikiakai.vercel.app/ :)
 
