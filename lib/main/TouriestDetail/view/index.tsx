@@ -1,6 +1,13 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Avatar, Box, IconButton, Stack, Typography } from '@mui/material'
+import {
+  Avatar,
+  Box,
+  Button,
+  IconButton,
+  Stack,
+  Typography,
+} from '@mui/material'
 import SubHeadText from '@/components/SubHeadText'
 import GlassCard from '@/components/GlassCard'
 import { getTouriest } from '../services'
@@ -88,6 +95,10 @@ const TouriestDetail = (props: propsType) => {
                   Join at: {touriestDetail.createdat}
                 </Typography>
               </Box>
+              <Stack>
+                <Button variant="contained">Edit Data</Button>
+                <Button variant="outlined">Hapus Data</Button>
+              </Stack>
             </>
           )}
         </Box>
