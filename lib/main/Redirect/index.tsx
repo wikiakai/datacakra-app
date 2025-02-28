@@ -38,8 +38,6 @@ const RedirectPage = () => {
     >
       <GlassCard>
         <Typography sx={{ mb: '24px' }}>Click count: {counter}</Typography>
-        
-      </Typography>
         <Button onClick={handleClick} variant="contained">
           Login
         </Button>
