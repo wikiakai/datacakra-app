@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script type='text/javascript' src='//pl25989910.effectiveratecpm.com/7f/ee/98/7fee98e98863a33fa0b98dd61cc80211.js'></script>
+      </head>
       <body>{children}</body>
     </html>
   )
