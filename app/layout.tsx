@@ -36,6 +36,14 @@ export default function RootLayout({
           src="//www.highperformanceformat.com/0b827f359b2c70c0a1d75d8c73e1e72c/invoke.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="//pl25990105.effectiveratecpm.com/b50ded3f87426b00d0901ee8d86494be/invoke.js"
+          strategy="afterInteractive"
+          async
+          data-cfasync="false"
+        />
+        <div id="container-b50ded3f87426b00d0901ee8d86494be"></div>
+
         {children}
       </body>
     </html>
