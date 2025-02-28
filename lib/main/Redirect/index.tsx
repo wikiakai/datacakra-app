@@ -43,7 +43,7 @@ const RedirectPage = () => {
         </Button>
         <Select
         value={limit}
-        onChange={(e) => setLimit(parseInt(e.target.value, 10))}
+        onChange={(e) => setLimit(Number(e.target.value))}
         style={{ marginTop: "10px" }}
       >
         {[50, 80, 100, 120].map((value) => (
