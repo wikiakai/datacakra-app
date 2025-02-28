@@ -38,7 +38,7 @@ const RedirectPage = () => {
     >
       <GlassCard>
         <Typography sx={{ mb: '24px' }}>Click count: {counter}</Typography>
-        <Button onClick={handleClick} variant="contained">
+        <Button onClick={handleClick} variant="contained" disabled={counter >= limit}>
           Login
         </Button>
         <Select
