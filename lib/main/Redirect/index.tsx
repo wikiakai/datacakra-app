@@ -15,7 +15,7 @@ const RedirectPage = () => {
     router.push('/login')
   }
 
-  const handleClick = (event) => {
+  const handleClick = () => {
 
     window.open("https://www.effectiveratecpm.com/qyszu9ib?key=d2631095e677c94c8449218b2aedb31b", "_blank");
     setCounter((prev) => {
