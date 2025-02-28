@@ -1,6 +1,6 @@
 'use client'
 import GlassCard from '@/components/GlassCard'
-import { Box, Button, Dialog, Typography,  MenuItem, Select, Typography } from '@mui/material'
+import { Box, Button, Dialog,  MenuItem, Select, Typography } from '@mui/material'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
@@ -16,8 +16,8 @@ const RedirectPage = () => {
   }
 
   const handleClick = (event) => {
-  
-        window.open("https://www.effectiveratecpm.com/qyszu9ib?key=d2631095e677c94c8449218b2aedb31b", "_blank");
+
+    window.open("https://www.effectiveratecpm.com/qyszu9ib?key=d2631095e677c94c8449218b2aedb31b", "_blank");
     setCounter((prev) => {
       const newCount = prev + 1;
       return newCount;
@@ -37,7 +37,7 @@ const RedirectPage = () => {
       }}
     >
       <GlassCard>
-        <Typography sx={{ mb: '24px' }}>        Click count: {counter}</Typography>
+        <Typography sx={{ mb: '24px' }}>Click count: {counter}</Typography>
         
       </Typography>
         <Button onClick={handleClick} variant="contained">
