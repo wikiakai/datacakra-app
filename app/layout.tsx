@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
    <html lang="en">
       <head>
-        <meta name="monetag" content="c9ff73f802af07c9570a3a296952a223">
+        <meta name="monetag" content="c9ff73f802af07c9570a3a296952a223"/>
         <Script
           src="//pl25989910.effectiveratecpm.com/7f/ee/98/7fee98e98863a33fa0b98dd61cc80211.js"
           strategy="beforeInteractive"
