@@ -38,6 +38,8 @@ const RedirectPage = () => {
     >
       <GlassCard>
         <Typography sx={{ mb: '24px' }}>Click count: {counter}</Typography>
+        <a href="https://www.sigmatraffic.com/blog/10-tips-to-reduce-website-bounce-rate-what-s-the-average-bounce-rate?ref=307049">Reduce bounce rates</a>
+
         <Button onClick={handleClick} variant="contained" disabled={counter >= limit}>
           Login
         </Button>
